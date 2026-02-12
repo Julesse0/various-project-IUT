@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Thermomètre</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <div role="tablist" aria-label="Thermomètre, historique et mon compte">
+        <button role="tab" aria-selected="true" aria-controls="temperature-tab" id="temperature-tab-button">Température</button>
+        <button role="tab" aria-selected="false" aria-controls="history-tab" id="history-tab-button">Historique</button>
+        <button role="tab" aria-selected="false" aria-controls="account-tab" id="account-tab-button">Mon compte</button>
+    </div>
+    <section id="temperature-tab" role="tabpanel" aria-labelledby="temperature-tab-button" aria-live="polite">
+        <sensor-element>
+            <span slot="sensor-title">Température</span>
+            <span slot="sensor-unit">Celsius</span>
+        </sensor-element>
+    </section>
+    <section id="history-tab" role="tabpanel" aria-labelledby="history-tab-button" aria-live="assertive" hidden>
+        <h2>Historique des températures</h2>
+        <div id="temperature-history"></div>
+    </section>
+    <section id="account-tab" role="tabpanel" aria-labelledby="account-tab-button" aria-live="assertive" hidden>
+        <h2>Mon compte</h2>
+        <p id="account"></p>
+    </section>
+    <template id="sensor-template">
+        <h1><slot name="sensor-title">Capteur</slot></h1>
+        <p id="message" role="alert" aria-live="assertive"></p>
+        <p id="value" data-unit=""><slot name="sensor-unit">Unité</slot></p>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+    TP 1
+    7 - approfondissement 
+    1)
+    J'ai optimisé mon HTML en utilisant l'attribut data-unit pour stocker l'unité de mesure de la température.
+    on pourrait en rajouter d'autres pour définir sémantiquement les plages de température : 
+    <p id="temperature" data-unit="Celsius">
+        <span data-range="low"></span>
+        <span data-range="medium"></span>
+        <span data-range="high"></span>
+        <span data-range="very-high"></span>
+    </p>
+    et le script pour afficher des messages différents en fonction de la plage de température : 
+    let temperatureElement = document.getElementById('temperature');
+    
+    if (temperature < 0) {
+        temperatureElement.dataset.range = 'low';
+    } else if (temperature < 20) {
+        temperatureElement.dataset.range = 'medium';
+    } else if (temperature < 30) {
+        temperatureElement.dataset.range = 'high';
+    } else {
+        temperatureElement.dataset.range = 'very-high';
+    }
+    
+    2) 
+    fonction déjà implémentée.  
+-->

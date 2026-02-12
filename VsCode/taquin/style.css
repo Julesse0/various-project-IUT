@@ -1,0 +1,23 @@
+h1, h2 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholderImg {
+    max-width: 100%;
+    height: auto;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

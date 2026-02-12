@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1, p {
+    text-align: center;
+}
+
+random{
+    flex-direction: column;
+}
+
+calculatrice{
+    flex-direction: row;
+}

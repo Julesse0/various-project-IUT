@@ -1,0 +1,16 @@
+{
+    "require": {
+        "twig/twig": "^3.18",
+        "latte/latte": "^3.0",
+        "doctrine/cache": "^2.2",
+        "symfony/orm-pack": "^2.4",
+        "doctrine/orm": "^3.3",
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/common": "^3.5",
+        "doctrine/annotations": "*"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.62",
+        "symfony/test-pack": "^1.1"
+    }
+}

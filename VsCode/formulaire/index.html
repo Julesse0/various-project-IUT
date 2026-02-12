@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />   
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="image/favicon.jpg" sizes="any"/>
+    <title>Formulaire</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Inscription</h1>
+        <section class="etape etape-1">
+            <h2>Étape 1: Identité</h2>
+            <div class="champ">
+                <label for="civilite">Civilité:</label>
+                <select name="civilite" id="civilite">
+                    <option value="m">M.</option>
+                    <option value="mme">Mme</option>
+                    <option value="Autres">Autres</option>
+                </select>
+            </div>
+            <div class="champ">
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom" required>
+            </div>
+            <div class="champ">
+                <label for="prenom">Prénom:</label>
+                <input type="text" name="prenom" id="prenom" required>
+            </div>
+            <div class="champ">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="champ">
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" name="telephone" id="telephone">
+            </div>
+        </section>
+        <section class="etape etape-2">
+            <h2>Étape 2: Adresse de livraison</h2>
+            <div class="champ">
+                <label for="adresse">Adresse:</label>
+                <input type="text" name="adresse" id="adresse" required>
+            </div>
+            <div class="champ">
+                <label for="code_postal">Code postal:</label>
+                <input type="text" name="code_postal" id="code_postal" required>
+            </div>
+            <div class="champ">
+                <label for="ville">Ville:</label>
+                <input type="text" name="ville" id="ville" required>
+            </div>
+        </section>
+        <section class="etape etape-3">
+            <h2>Étape 3: Informations CB</h2>
+            <div class="champ">
+                <label for="type_carte">Type de carte bancaire:</label>
+                <select name="type_carte" id="type_carte">
+                    <option value="visa">VISA</option>
+                    <option value="amex">American Express</option>
+                    <option value="mastercard">Mastercard</option>
+                </select>
+            </div>
+            <div class="champ">
+                <label for="numero_carte">Numéro de carte:</label>
+                <input type="text" name="numero_carte" id="numero_carte" required>
+            </div>
+            <div class="champ">
+                <label for="code_securite">Code de sécurité:</label>
+                <input type="text" name="code_securite" id="code_securite" required>
+            </div>
+        </section>
+        <button type="submit" id="validerBtn">Valider</button>
+        <script src="script.js"></script>
+    </form>
+</body>
+</html>

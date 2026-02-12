@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+form {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre à la bordure */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    max-width: 500px; 
+    margin: auto; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.etape {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+input:required,
+select:required {
+    border: 1px solid #ff0000;
+}

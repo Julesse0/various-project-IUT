@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+sensor-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.blue-border, .green-border, .orange-border, .red-border {
+    border: 2px solid;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.blue-border { 
+    border-color: blue; 
+}
+
+.green-border { 
+    border-color: green;
+}
+
+.orange-border { 
+    border-color: orange; 
+}
+
+.red-border { 
+    border-color: red; 
+}
